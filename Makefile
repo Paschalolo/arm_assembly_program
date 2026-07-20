@@ -1,5 +1,5 @@
 
-ASMFILE=$(MEM)/$(FILE).S
+ASMFILE=$(FILE).S
 OFILE=$(FILE).o
 DEBUGFLGS= -g
 
@@ -14,13 +14,13 @@ run : link
 runp : link 
 	./src/$(FILE)  
 link : build 
-	ld -o bin/$(FILE) src/$(MEM)/$(OFILE)
+	ld -o bin/$(FILE) bin/$(OFILE)
 
 build : $(ASMFILE)
-	as $(DEBUGFLGS) -o ./src/$(MEM)/$(OFILE) $< 
+	as $(DEBUGFLGS) -o ./bin/$(OFILE) $< 
 
 build2 : $(ASMFILE)
-	as $(DEBUGFLGS) -o ./src/$(MEM)/$(OFILE) $< 
+	as $(DEBUGFLGS) -o ./src/$(OFILE) $< 
 
 push : 
 	git add . && git commit -m "mesa" && git push origin main
