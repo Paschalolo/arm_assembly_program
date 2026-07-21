@@ -16,4 +16,7 @@ _start :
 	// register offset 
 	ldr x3, [x2 , lsl , #3]
 
-	strh w0 , [x2, x3 ,lsl , #2 ] //-> x2 + (x3 * 4 )
+	strh w0 , [x2, x3 ,lsl , #2 ] //-> x2 + (x3 * 4)
+
+	// load pairs 
+	ldp x29 , x30 , [sp , #16]! // put x29 and x30 into sp + 16 and then add 16 to sp pre indexing 
