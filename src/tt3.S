@@ -16,4 +16,4 @@ _start :
 	// register offset 
 	ldr x3, [x2 , lsl , #3]
 
-	strh w0 , [x2, x3 ,lsl , #2 ]
+	strh w0 , [x2, x3 ,lsl , #2 ] //-> x2 + (x3 * 4 )
