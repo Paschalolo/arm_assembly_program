@@ -19,4 +19,13 @@ cset w0 , cc// this will set the w0 register to 1 or 0 dependin on the carry fla
 flipflop : 
 	tst w0 , #1 
 	add w1 , w0 ,#-1 
-	csinc wo , w1 , w0 , ne 
+	csinc wo , w1 , w0 , ne
+
+	tst x1 , #1 
+	neg x0 , x1 
+	b else
+	ret 
+else : 
+	add x2 , x2 , #7 
+	ret 
+	
