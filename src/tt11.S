@@ -1,5 +1,6 @@
 
 
+
 .section .text
 .extern getchar 
 _start : 
@@ -13,3 +14,9 @@ loop:
 
 ccmp x0 , x1 , 0b0010 , eq 
 cset w0 , cc// this will set the w0 register to 1 or 0 dependin on the carry flag
+
+
+flipflop : 
+	tst w0 , #1 
+	add w1 , w0 ,#-1 
+	csinc wo , w1 , w0 , ne 
