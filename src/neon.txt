@@ -1,0 +1,16 @@
+
+// ARM64 has neon registers these are 128 bit registers used for floating point or vector processing 
+v0 
+register can be accessed by size in padded form from 
+b0 -> byte 
+h0 -> half word 
+s0-> word 
+d0 -> double word 
+q0-> octa word
+
+; Protions of the registers can be referred to using array index notation 
+i.e -> v1.f64[1]
+
+registers v0 - v7 are volatileThe callee dosentot save their values 
+registers v8 - v15 non volatile vlues are saved by the callee
+registers v16- v31 -> These are volatile registers 
