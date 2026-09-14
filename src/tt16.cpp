@@ -7,8 +7,6 @@ extern "C" {
 	long integer_AddSubB(long a , long b , long c);
 }
 
-integer_AddSubA
-integer_AddSubB
 int main(){
 
 	std::printf("integer_add %d\n" , integer_AddSubA(12,33,43)) ;
